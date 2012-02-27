@@ -1,20 +1,20 @@
 Every Unicode code point
 ========================
-While building and testing code meant to properly handle arbitrary UTF-8 strings, I had need for some Unicode test documents or files that included every possible codepoint: including control codes like NULL, EOT, XOFF, CAN and the never-seen-used DC2 right past 7-bit US-ASCII and on to the deep recesses of Unicode.
+While building and testing code meant to properly handle arbitrary UTF-8 strings, I had need for some Unicode test documents or files that included every possible codepoint, including control codes like NULL, EOT, XOFF, CAN and the never-seen-used DC2 right past 7-bit US-ASCII and on to the deep recesses of Unicode.
 
 You never know what garbage people or errors will throw at your system, so here you'll find the gamut of representable characters / code points.
 
 
 ## Raw Character Sequences
 
-unseparated/*.txt documents contain every UTF-8 code point in a given range, raw, without any separation between characters / code points.
+`UTF-8_sequence_unseparated/*.txt` documents contain every UTF-8 code point in a given range, raw, without any separation between characters / code points.
 
 
 ## Readable Character Sequences
 
-separated/*.txt documents contain every UTF-8 code point in a given range separated by spaces with newlines every 50 characters / code points to aid readability.
+`UTF-8_sequence_separated/*.txt` documents contain every UTF-8 code point in a given range separated by spaces with newlines every 50 characters / code points to aid readability.
 
-separated/*.html documents contain the same sequences as the separated/*.txt files but as XHTML with UTF-8 specified.
+`UTF-8_sequence_separated/*.html` documents contain the same sequences as the UTF-8_sequence_separated/*.txt files but as UTF-8 encoded XHTML without any character entity encoding.  Note that even characters such as < > & and ' that MUST BE encoded into their character entiry representations to be valid XML/XHTML have intentionally not been, so these are not valid XML.  They are nonetheless helpful for testing.
 
 
 ## Variants
