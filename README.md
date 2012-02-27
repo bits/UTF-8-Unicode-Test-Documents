@@ -17,15 +17,17 @@ separated/*.txt documents contain every UTF-8 code point in a given range separa
 separated/*.html documents contain the same sequences as the separated/*.txt files but as XHTML with UTF-8 specified.
 
 
-Raw and Readable Variants
-=========================
+Variants
+========
 - printable characters / code points
 - assigned code points (including unprintable codepoints as-is)
 - assigned code points (including unprintable codepoints, but these replaced by Unicode Character 'REPLACEMENT CHARACTER' (U+FFFD))
 - assigned and unassigned code points (including unprintable codepoints as-is)
 - assigned and unassigned code points (including unprintable codepoints, but these replaced by Unicode Character 'REPLACEMENT CHARACTER' (U+FFFD))
 
-
 Note that these documents really do contain every character / code point in the specified range, including potentially unexpected control characters like NULL, ESC, End of Transmission (EOT), etc…  Many usual tools can have difficulty working with them because they contain rarely seen characters, and the larger ranges have a lot in them.
 
-Your system must have at least one installed font that contains a character for a given code point for you to be able to see it.  George Douros's Symbola font http://users.teilar.gr/~g1951d/ covers Unicode 6.0 and has the broadest coverage of unusual scripts that I am aware of.
+For you to be able to see a given character, your system must have at least one installed font that contains a glyph for that code point for you to be able to see it.  To see all these wonderous and unexpected characters, you may want to obtain:
+
+- James Kass' Code2000, Code2001 and Code2002 fonts. http://en.wikipedia.org/wiki/Code2000 explains that James' site is long gone, but thankfully Internet Archive's Wayback Machine saved it at http://web.archive.org/web/20110108105420/http://code2000.net/
+- George Douros's Symbola font http://users.teilar.gr/~g1951d/ covers Unicode 6.0
