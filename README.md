@@ -61,3 +61,8 @@ For you to be able to see a given character, your system must have at least one 
 
 - James Kass' Code2000, Code2001 and Code2002 fonts. http://en.wikipedia.org/wiki/Code2000 explains that James' site is long gone, but thankfully Internet Archive's Wayback Machine saved it at http://web.archive.org/web/20110108105420/http://code2000.net/
 - George Douros's Symbola font http://users.teilar.gr/~g1951d/ covers Unicode 6.0
+
+
+# Show me the code
+
+Of course.  This *is* github…  You can see exactly how these files were generated or generate your own UTF-8 character sequences with the flexible generator/utf8_sequence_generator.pl
