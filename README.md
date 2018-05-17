@@ -11,7 +11,7 @@ The `UTF-8_sequence_separated/*.txt` are UTF-8 encoded plaintext documents conta
 
 Your viewer might need to be told that the files are UTF-8 for them to show properly.  As is recommended with UTF-8, no Byte Order Marks (BOM) are employed. Opening the files from your filesystem in your browser will not likely work because there's nothing to tell the browser that it's dealing with UTF-8 encoded content and not your system's current character encoding.  Serve them from a web server that indicates their UTF-8-ness with a `Content-Type: text/plain; charset=utf-8` HTTP header and all is well.  GitHub-served "raw" files do this.  Alternatively, your viewer or editor may have a command to open a file as UTF-8.
 
-Similarly, the `UTF-8_sequence_separated/*.html` documents contain the same sequences as the `UTF-8_sequence_separated/*.txt` files as UTF-8 encoded XHTML documents **without any character entity encoding**.  Note that even characters such as < > & and ' that MUST BE encoded into their character entiry representations to be valid XML/XHTML have intentionally not been, so these are **not valid XML**.  They are nonetheless helpful for testing.
+Similarly, the `UTF-8_sequence_separated/*.html` documents contain the same sequences as the `UTF-8_sequence_separated/*.txt` files as UTF-8 encoded XHTML documents **without any character entity encoding**.  Note that even characters such as < > & and ' that MUST BE encoded into their character entiry representations to be valid XML/XHTML have intentionally not been, so these are **not valid XML**.  They are nonetheless useful in testing.
 
 
 ## Raw Character Sequences
@@ -25,7 +25,7 @@ The `UTF-8_sequence_unseparated/*.txt` are UTF-8 encoded plaintext documents con
 - assigned code points (including unprintable codepoints as-is)
 - assigned code points (including unprintable codepoints, but these replaced by Unicode Character 'REPLACEMENT CHARACTER' (U+FFFD))
 
-and since we're pushing the limits:
+and for completeness:
 
 - assigned and unassigned code points (including unprintable codepoints as-is)
 - assigned and unassigned code points (including unprintable codepoints, but these replaced by Unicode Character 'REPLACEMENT CHARACTER' (U+FFFD))
@@ -59,10 +59,11 @@ These documents really do contain every character / code point in the specified 
 
 For you to be able to see a given character, your system must have at least one installed font that contains a glyph for that code point for you to be able to see it.  To see all these wonderous and unexpected characters, you may want to obtain:
 
+- Google Noto fonts https://www.google.com/get/noto/
+- Google Noto CJK comprehensively covers Simplified Chinese, Traditional Chinese, Japanese, and Korean in a unified font family https://www.google.com/get/noto/help/cjk/
+- George Douros's Symbola font http://users.teilar.gr/~g1951d/
 - James Kass' Code2000, Code2001 and Code2002 fonts. http://en.wikipedia.org/wiki/Code2000 explains that James' site is long gone, but thankfully Internet Archive's Wayback Machine saved it at http://web.archive.org/web/20110108105420/http://code2000.net/
-- George Douros's Symbola font http://users.teilar.gr/~g1951d/ covers Unicode 6.0
-
 
 # Show me the code
 
-Of course.  This *is* github…  You can see exactly how these files were generated or generate your own UTF-8 character sequences with the flexible generator/utf8_sequence_generator.pl
+ Absolutely.  You want your bits freshly generated.  Stored bits are just not the same.  I understand.  :) See exactly how these files were generated, or generate your own UTF-8 character sequences with the flexible generator/utf8_sequence_generator.pl
