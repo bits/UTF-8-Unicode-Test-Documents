@@ -18,7 +18,7 @@ my $html_pre = q|<?xml version="1.0" encoding="utf-8"?>
 my $html_post = q|</body>
 </html>|;
 
-my $output_directory = '/home/paul/catalyst/itools/root/static/test/utf8_sequences/';
+my $output_directory = './utf8_sequences/';
 
 my $utf8_seq;
 
