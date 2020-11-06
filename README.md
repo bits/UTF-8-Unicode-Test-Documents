@@ -1,17 +1,17 @@
 Every Unicode code point
 ========================
-While building and testing code meant to properly handle arbitrary UTF-8 strings, there is often a need for some Unicode test documents that included every possible codepoint, including control codes like `NULL`, `EOT`, `XOFF`, `CAN`cel and the never-seen-used `DC2`, right through 7-bit US-ASCII and on to the deepest recesses of Unicode.
+While building and testing code meant to properly handle arbitrary UTF-8 strings, you might want to make use of some test documents that include every possible Unicode codepoint.  These would include control codes like `NULL`, `EOT`, `XOFF`, `CAN`cel and the never-seen-used `DC2`, all of 7-bit US-ASCII and explode in volume to cover the deepest recesses of Unicode.  Here are those documents.
 
-You never know what garbage people or errors will throw at your system, so here you'll find **the gamut of representable characters / code points to test with**.
+You never know what garbage people, fuzzers or errors will throw at your system, so here you'll find **the gamut of representable characters / code points to test with**.
 
 
 ## Human-Readable Character Sequences
 
-The `UTF-8_sequence_separated/*.txt` are UTF-8 encoded plaintext documents containing every UTF-8 code point in a given range separated by spaces with newlines every 50 code points to aid readability.  
+The `UTF-8_sequence_separated/*.txt` are UTF-8 encoded plaintext documents containing every UTF-8 code point in a given range separated by spaces with newlines every 50 code points to aid readability.
 
 Your viewer might need to be told that the files are UTF-8 for them to show properly.  As is recommended with UTF-8, no Byte Order Marks (BOM) are employed. Opening the files from your filesystem in your browser will not likely work because there's nothing to tell the browser that it's dealing with UTF-8 encoded content and not your system's current character encoding.  Serve them from a web server that indicates their UTF-8-ness with a `Content-Type: text/plain; charset=utf-8` HTTP header and all is well.  GitHub-served "raw" files do this.  Alternatively, your viewer or editor may have a command to open a file as UTF-8.
 
-Similarly, the `UTF-8_sequence_separated/*.html` documents contain the same sequences as the `UTF-8_sequence_separated/*.txt` files as UTF-8 encoded XHTML documents **without any character entity encoding**.  Note that even characters such as < > & and ' that MUST BE encoded into their character entiry representations to be valid XML/XHTML have intentionally not been, so these are **not valid XML**.  They are nonetheless useful in testing.
+Similarly, the `UTF-8_sequence_separated/*.html` documents contain the same sequences as the `UTF-8_sequence_separated/*.txt` files as UTF-8 encoded XHTML documents **without any character entity encoding**.  Note that even characters such as < > & and ' that MUST BE encoded into their character entity representations to be valid XML/XHTML have intentionally not been, so these are **not valid XML**.  They are nonetheless useful in testing.
 
 
 ## Raw Character Sequences
@@ -37,8 +37,8 @@ and for completeness:
 10000–​1FFFF Plane 1: Supplementary Multilingual Plane
 20000–​2FFFF Plane 2: Supplementary Ideographic Plane
 30000–​DFFFF Planes 3–13: *Unassigned*
-E0000–​EFFFF Plane 14: Supplement­ary Special-purpose Plane
-F0000–​10FFFF Planes 15–16: Supplement­ary Private Use Area
+E0000–​EFFFF Plane 14: Supplementary Special-purpose Plane
+F0000–​10FFFF Planes 15–16: Supplementary Private Use Area
 
 The documents' filenames indicate the range of characters / code points they contain.  Refer to the above to see how these map to the various Unicode planes.
 
@@ -52,12 +52,12 @@ These documents really do contain every character / code point in the specified 
 
 - High and low surrogate halves used by UTF-16 (U+D800 through U+DFFF) are not legal Unicode values, and the UTF-8 encoding of them is an invalid byte sequence. Not included.
 - 0xFDD0 through 0xFDEF are non-characters and not included.
-- likewise, 0xFFFE, 0xFFFF, 0x1FFFE, 0x1FFFF, …, 0xfFFFE, 0xFFFFF, 0x10FFFE, 0x10FFFF are non-characters and are not included in any of the files.
+- likewise, 0xFFFE, 0xFFFF, 0x1FFFE, 0x1FFFF, …, 0xFFFFE, 0xFFFFF, 0x10FFFE, 0x10FFFF are non-characters and are not included in any of the files.
 
 
 ## Fonts to see them by
 
-For you to be able to see a given character, your system must have at least one installed font that contains a glyph for that code point for you to be able to see it.  To see all these wonderous and unexpected characters, you may want to obtain:
+For you to be able to see a given character, your system must have at least one installed font that contains a glyph for that code point for you to be able to see it.  To see all these wondrous and unexpected characters, you may want to obtain:
 
 - Google Noto fonts https://www.google.com/get/noto/
 - Google Noto CJK comprehensively covers Simplified Chinese, Traditional Chinese, Japanese, and Korean in a unified font family https://www.google.com/get/noto/help/cjk/
